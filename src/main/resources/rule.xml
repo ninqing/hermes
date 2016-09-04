@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+ 
+	<bean id="vtabroot" class="com.taobao.tddl.rule.VirtualTableRoot"
+		init-method="init">
+		<property name="defaultDbIndex" value="tddl_test_0"/>
+		<!-- 请修改成应用默认的group -->
+		<property name="dbType" value="MYSQL"></property>
+		<property name="tableRules">
+			<map>
+				<entry key="test_table" value-ref="test_table" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="test_table" class="com.taobao.tddl.rule.config.TableRule">
+		<property name="dbNamePattern" value="tddl_test_{0}" />
+		<property name="dbRuleArray">
+			<value>((#id,1,4#)%4).intdiv(2)</value>
+		</property>
+		<property name="tbNamePattern" value="test_table_{00}" />
+		<property name="tbRuleArray">
+			<value>#id,1,4#.longValue() % 4</value>
+		</property>
+        <property name="allowFullTableScan" value="true"/>
+	</bean>
+ 
+</beans>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap>
+	<resultMap id="normalTblRow" class="com.taobao.tddl.qatest.util.NormalTblRow">
+		<result column="pk" property="pk" />
+		<result column="varcharr" property="varcharr" />
+		<result column="charr" property="charr" />
+		<result column="varbinaryr" property="varbinaryr" />
+		<result column="binaryr" property="binaryr" />
+		<result column="blobr" property="blobr" />
+		<result column="textr" property="textr" />
+		<result column="tinyintr" property="tinyintr" />
+		<result column="smallintr" property="smallintr" />
+		<result column="mediumintr" property="mediumintr" />
+		<result column="integerr" property="integerr" />
+		<result column="bigintr" property="bigintr" />
+		<result column="utinyintr" property="utinyintr" />
+		<result column="usmallintr" property="usmallintr" />
+		<result column="umediumintr" property="umediumintr" />
+		<result column="uintegerr" property="uintegerr" />
+		<result column="ubigintr" property="ubigintr" />
+		<result column="bitr" property="bitr" />
+		<result column="floatr" property="floatr" />
+		<result column="doubler" property="doubler" />
+		<result column="decimalr" property="decimalr" />
+		<result column="dater" property="dater" />
+		<result column="dater" property="dateString" />
+		<result column="timer" property="timer" />
+		<result column="datetimer" property="datetimer" />
+		<result column="datetimer" property="datetimeDate" />
+		<result column="timestampr" property="timestampr" />
+		<result column="yearr" property="yearr" />
+	</resultMap>
+    <select id="select_test" resultMap="normalTblRow">
+ 		<![CDATA[
+		select * from mysql_ibatis_type where pk = #pk# order by pk asc
+		]]>
+	</select>
+	<select id="select_test_max" resultMap="normalTblRow">
+ 		<![CDATA[
+		select max(pk) as pk ,max(varcharr) as varcharr ,max(charr) as charr,max(varbinaryr) as varbinaryr,max(binaryr) as binaryr,max(blobr) as blobr ,max(textr) as textr,max(tinyintr)as tinyintr,max(smallintr) as smallintr,max(mediumintr) as mediumintr,max(integerr) as integerr,max(bigintr) as bigintr,
+		max(utinyintr) as utinyintr,max(usmallintr) as usmallintr,max(umediumintr) as umediumintr,max(uintegerr) as uintegerr,max(ubigintr) as ubigintr,max(bitr) as bitr,max(floatr) as floatr,max(doubler) as doubler,max(decimalr) as decimalr,max(dater) as dater,max(timer) as timer,max(datetimer) as datetimer,max(timestampr) as timestampr,max(yearr) as yearr
+		from mysql_ibatis_type where pk in 
+		]]>
+		<iterate property="pks" open="(" close=")" conjunction=",">
+			#pks[]#
+		</iterate>
+		<![CDATA[
+		 order by pk asc
+		]]>
+	</select>
+	<select id="select_test_min" resultMap="normalTblRow">
+ 		<![CDATA[
+		select min(pk) as pk ,min(varcharr) as varcharr ,min(charr) as charr,min(varbinaryr) as varbinaryr,min(binaryr) as binaryr,min(blobr) as blobr ,min(textr) as textr,min(tinyintr)as tinyintr,min(smallintr) as smallintr,min(mediumintr) as mediumintr,min(integerr) as integerr,min(bigintr) as bigintr,
+		min(utinyintr) as utinyintr,min(usmallintr) as usmallintr,min(umediumintr) as umediumintr,min(uintegerr) as uintegerr,min(ubigintr) as ubigintr,min(bitr) as bitr,min(floatr) as floatr,min(doubler) as doubler,min(decimalr) as decimalr,min(dater) as dater,min(timer) as timer,min(datetimer) as datetimer,min(timestampr) as timestampr,min(yearr) as yearr
+		from mysql_ibatis_type where pk in 
+		]]>
+		<iterate property="pks" open="(" close=")" conjunction=",">
+			#pks[]#
+		</iterate>
+		<![CDATA[
+		 order by pk asc
+		]]>
+	</select>
+	 <select id="select_tdhs_test" resultMap="normalTblRow">
+ 		<![CDATA[
+		select * from tdhs_ibatis_type where pk = #pk# order by pk asc
+		]]>
+	</select>
+	<insert id="insert_test">
+		insert into mysql_ibatis_type (pk,varcharr,charr,varbinaryr,binaryr,blobr,textr,tinyintr,smallintr,mediumintr,integerr,bigintr,utinyintr,usmallintr,umediumintr,uintegerr,ubigintr,bitr,floatr,doubler,decimalr,dater,timer,datetimer,timestampr,yearr) values
+		(#pk#,#varcharr#,#charr#,#varbinaryr#,#binaryr#,#blobr#,#textr#,#tinyintr#,#smallintr#,#mediumintr#,#integerr#,#bigintr#,#utinyintr#,#usmallintr#,#umediumintr#,#uintegerr#,#ubigintr#,#bitr#,#floatr#,#doubler#,#decimalr#,#dater#,#timer#,#datetimer#,#timestampr#,#yearr#)
+    </insert>
+    
+    <insert id="insert_tdhs_test">
+		insert into mysql_ibatis_type (pk,varcharr,charr,varbinaryr,binaryr,blobr,textr,tinyintr,smallintr,mediumintr,integerr,bigintr,utinyintr,usmallintr,umediumintr,uintegerr,ubigintr,bitr,floatr,doubler,decimalr,dater,timer,datetimer,timestampr,yearr) values
+		(#pk#,#varcharr#,#charr#,#varbinaryr#,#binaryr#,#blobr#,#textr#,#tinyintr#,#smallintr#,#mediumintr#,#integerr#,#bigintr#,#utinyintr#,#usmallintr#,#umediumintr#,#uintegerr#,#ubigintr#,#bitr#,#floatr#,#doubler#,#decimalr#,#dater#,#timer#,#datetimer#,#timestampr#,#yearr#)
+    </insert>
+    	<insert id="delete_test">
+		delete from mysql_ibatis_type where pk=#pk#
+    </insert>
+        	<insert id="delete_tdhs_test">
+		delete from tdhs_ibatis_type where pk=#pk#
+    </insert>
+    
+</sqlMap>
