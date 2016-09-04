@@ -50,11 +50,11 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.13</version>
 		</dependency>
-		<dependency>
+		<!--  <dependency>
 			<groupId>com.taobao.diamond</groupId>
 			<artifactId>diamond-client</artifactId>
 			<version>3.7.0-SNAPSHOT</version>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
@@ -92,12 +92,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.30</version>
 		</dependency>
-		<dependency>
-			<groupId>com.sleepycat</groupId>
-			<artifactId>je</artifactId>
-			<version>5.0.73</version>
-		</dependency>
-		<!-- <dependency> <groupId>com.alipay.oceanbase</groupId> <artifactId>oceanbase</artifactId> 
+		<!-- <dependency> <groupId>com.alipay.oceanbase</groupId> <artifactId>oceanbase</artifactId>
 			<version>1.2.2</version> </dependency> Log libs -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
