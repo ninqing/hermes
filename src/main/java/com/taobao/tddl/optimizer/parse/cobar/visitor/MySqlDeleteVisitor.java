@@ -1,11 +1,11 @@
 package com.taobao.tddl.optimizer.parse.cobar.visitor;
 
-import com.alibaba.cobar.parser.ast.expression.Expression;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLDeleteStatement;
-import com.alibaba.cobar.parser.visitor.EmptySQLASTVisitor;
 import com.taobao.tddl.common.exception.NotSupportException;
 import com.taobao.tddl.optimizer.core.ast.dml.DeleteNode;
 import com.taobao.tddl.optimizer.core.ast.query.TableNode;
+import com.taobao.tddl.parser.ast.expression.Expression;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLDeleteStatement;
+import com.taobao.tddl.parser.visitor.EmptySQLASTVisitor;
 
 /**
  * delete处理

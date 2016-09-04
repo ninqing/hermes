@@ -7,7 +7,7 @@
 
 package com.taobao.tddl.executor.common;
 
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLSelectStatement.LockMode;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLSelectStatement.LockMode;
 
 /**
  * Specifies the attributes of a database environment transaction.

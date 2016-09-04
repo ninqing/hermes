@@ -3,8 +3,6 @@ package com.taobao.tddl.optimizer.parse.cobar;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
-import com.alibaba.cobar.parser.ast.stmt.SQLStatement;
-import com.alibaba.cobar.parser.recognizer.SQLParserDelegate;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.taobao.tddl.common.TddlConstants;
@@ -12,6 +10,8 @@ import com.taobao.tddl.common.model.lifecycle.AbstractLifecycle;
 import com.taobao.tddl.optimizer.exceptions.SqlParserException;
 import com.taobao.tddl.optimizer.parse.SqlAnalysisResult;
 import com.taobao.tddl.optimizer.parse.SqlParseManager;
+import com.taobao.tddl.parser.ast.stmt.SQLStatement;
+import com.taobao.tddl.parser.recognizer.SQLParserDelegate;
 
 /**
  * 基于cobar解析器实现parse

@@ -2,17 +2,17 @@ package com.taobao.tddl.optimizer.parse.cobar.visitor;
 
 import java.util.List;
 
-import com.alibaba.cobar.parser.ast.expression.Expression;
-import com.alibaba.cobar.parser.ast.expression.primary.Identifier;
-import com.alibaba.cobar.parser.ast.fragment.tableref.TableReference;
-import com.alibaba.cobar.parser.ast.fragment.tableref.TableReferences;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLUpdateStatement;
-import com.alibaba.cobar.parser.util.Pair;
-import com.alibaba.cobar.parser.visitor.EmptySQLASTVisitor;
 import com.taobao.tddl.common.exception.NotSupportException;
 import com.taobao.tddl.optimizer.core.ast.QueryTreeNode;
 import com.taobao.tddl.optimizer.core.ast.dml.UpdateNode;
 import com.taobao.tddl.optimizer.core.ast.query.TableNode;
+import com.taobao.tddl.parser.ast.expression.Expression;
+import com.taobao.tddl.parser.ast.expression.primary.Identifier;
+import com.taobao.tddl.parser.ast.fragment.tableref.TableReference;
+import com.taobao.tddl.parser.ast.fragment.tableref.TableReferences;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLUpdateStatement;
+import com.taobao.tddl.parser.util.Pair;
+import com.taobao.tddl.parser.visitor.EmptySQLASTVisitor;
 
 /**
  * update类型处理

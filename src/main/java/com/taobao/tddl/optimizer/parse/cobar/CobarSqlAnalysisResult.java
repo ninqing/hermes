@@ -3,22 +3,6 @@ package com.taobao.tddl.optimizer.parse.cobar;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.cobar.parser.ast.expression.Expression;
-import com.alibaba.cobar.parser.ast.expression.primary.SysVarPrimary;
-import com.alibaba.cobar.parser.ast.fragment.tableref.TableReferences;
-import com.alibaba.cobar.parser.ast.stmt.SQLStatement;
-import com.alibaba.cobar.parser.ast.stmt.dal.ShowColumns;
-import com.alibaba.cobar.parser.ast.stmt.dal.ShowCreate;
-import com.alibaba.cobar.parser.ast.stmt.dal.ShowCreate.Type;
-import com.alibaba.cobar.parser.ast.stmt.dal.ShowIndex;
-import com.alibaba.cobar.parser.ast.stmt.ddl.DDLStatement;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLDeleteStatement;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLInsertStatement;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLReplaceStatement;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLSelectStatement;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLUpdateStatement;
-import com.alibaba.cobar.parser.util.Pair;
-import com.alibaba.cobar.parser.visitor.SQLASTVisitor;
 import com.taobao.tddl.common.exception.NotSupportException;
 import com.taobao.tddl.common.jdbc.ParameterContext;
 import com.taobao.tddl.common.model.SqlType;
@@ -35,6 +19,22 @@ import com.taobao.tddl.optimizer.parse.cobar.visitor.MySqlInsertVisitor;
 import com.taobao.tddl.optimizer.parse.cobar.visitor.MySqlReplaceIntoVisitor;
 import com.taobao.tddl.optimizer.parse.cobar.visitor.MySqlSelectVisitor;
 import com.taobao.tddl.optimizer.parse.cobar.visitor.MySqlUpdateVisitor;
+import com.taobao.tddl.parser.ast.expression.Expression;
+import com.taobao.tddl.parser.ast.expression.primary.SysVarPrimary;
+import com.taobao.tddl.parser.ast.fragment.tableref.TableReferences;
+import com.taobao.tddl.parser.ast.stmt.SQLStatement;
+import com.taobao.tddl.parser.ast.stmt.dal.ShowColumns;
+import com.taobao.tddl.parser.ast.stmt.dal.ShowCreate;
+import com.taobao.tddl.parser.ast.stmt.dal.ShowIndex;
+import com.taobao.tddl.parser.ast.stmt.dal.ShowCreate.Type;
+import com.taobao.tddl.parser.ast.stmt.ddl.DDLStatement;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLDeleteStatement;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLInsertStatement;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLReplaceStatement;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLSelectStatement;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLUpdateStatement;
+import com.taobao.tddl.parser.util.Pair;
+import com.taobao.tddl.parser.visitor.SQLASTVisitor;
 
 /**
  * 基于cobar构造的parse结果

@@ -3,22 +3,22 @@ package com.taobao.tddl.optimizer.parse.cobar.visitor;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.cobar.parser.ast.expression.Expression;
-import com.alibaba.cobar.parser.ast.expression.misc.QueryExpression;
-import com.alibaba.cobar.parser.ast.expression.primary.Identifier;
-import com.alibaba.cobar.parser.ast.expression.primary.ParamMarker;
-import com.alibaba.cobar.parser.ast.expression.primary.RowExpression;
-import com.alibaba.cobar.parser.ast.fragment.Limit;
-import com.alibaba.cobar.parser.ast.fragment.OrderBy;
-import com.alibaba.cobar.parser.ast.fragment.tableref.IndexHint;
-import com.alibaba.cobar.parser.ast.fragment.tableref.TableRefFactor;
-import com.alibaba.cobar.parser.ast.fragment.tableref.TableReferences;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLDeleteStatement;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLInsertStatement;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLReplaceStatement;
-import com.alibaba.cobar.parser.util.Pair;
-import com.alibaba.cobar.parser.visitor.MySQLOutputASTVisitor;
 import com.taobao.tddl.optimizer.exceptions.OptimizerException;
+import com.taobao.tddl.parser.ast.expression.Expression;
+import com.taobao.tddl.parser.ast.expression.misc.QueryExpression;
+import com.taobao.tddl.parser.ast.expression.primary.Identifier;
+import com.taobao.tddl.parser.ast.expression.primary.ParamMarker;
+import com.taobao.tddl.parser.ast.expression.primary.RowExpression;
+import com.taobao.tddl.parser.ast.fragment.Limit;
+import com.taobao.tddl.parser.ast.fragment.OrderBy;
+import com.taobao.tddl.parser.ast.fragment.tableref.IndexHint;
+import com.taobao.tddl.parser.ast.fragment.tableref.TableRefFactor;
+import com.taobao.tddl.parser.ast.fragment.tableref.TableReferences;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLDeleteStatement;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLInsertStatement;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLReplaceStatement;
+import com.taobao.tddl.parser.util.Pair;
+import com.taobao.tddl.parser.visitor.MySQLOutputASTVisitor;
 
 /**
  * 将cobar parser的语法树直接生成sql，允许替换表名

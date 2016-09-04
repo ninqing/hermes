@@ -13,7 +13,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.alibaba.cobar.parser.ast.stmt.SQLStatement;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.taobao.tddl.common.TddlConstants;
@@ -67,6 +66,7 @@ import com.taobao.tddl.optimizer.parse.hint.DirectlyRouteCondition;
 import com.taobao.tddl.optimizer.parse.hint.RouteCondition;
 import com.taobao.tddl.optimizer.parse.hint.RuleRouteCondition;
 import com.taobao.tddl.optimizer.parse.hint.SimpleHintParser;
+import com.taobao.tddl.parser.ast.stmt.SQLStatement;
 import com.taobao.tddl.rule.model.TargetDB;
 
 /**

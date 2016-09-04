@@ -3,26 +3,26 @@ package com.taobao.tddl.optimizer.parse.cobar.visitor;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.alibaba.cobar.parser.ast.expression.Expression;
-import com.alibaba.cobar.parser.ast.expression.primary.ParamMarker;
-import com.alibaba.cobar.parser.ast.fragment.GroupBy;
-import com.alibaba.cobar.parser.ast.fragment.Limit;
-import com.alibaba.cobar.parser.ast.fragment.OrderBy;
-import com.alibaba.cobar.parser.ast.fragment.SortOrder;
-import com.alibaba.cobar.parser.ast.fragment.tableref.TableReference;
-import com.alibaba.cobar.parser.ast.fragment.tableref.TableReferences;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLSelectStatement;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLSelectStatement.SelectDuplicationStrategy;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLSelectStatement.SelectOption;
-import com.alibaba.cobar.parser.ast.stmt.dml.DMLSelectUnionStatement;
-import com.alibaba.cobar.parser.util.Pair;
-import com.alibaba.cobar.parser.visitor.EmptySQLASTVisitor;
 import com.taobao.tddl.common.exception.NotSupportException;
 import com.taobao.tddl.optimizer.core.ASTNodeFactory;
 import com.taobao.tddl.optimizer.core.ast.QueryTreeNode;
 import com.taobao.tddl.optimizer.core.ast.query.QueryNode;
 import com.taobao.tddl.optimizer.core.expression.IFilter;
 import com.taobao.tddl.optimizer.core.expression.ISelectable;
+import com.taobao.tddl.parser.ast.expression.Expression;
+import com.taobao.tddl.parser.ast.expression.primary.ParamMarker;
+import com.taobao.tddl.parser.ast.fragment.GroupBy;
+import com.taobao.tddl.parser.ast.fragment.Limit;
+import com.taobao.tddl.parser.ast.fragment.OrderBy;
+import com.taobao.tddl.parser.ast.fragment.SortOrder;
+import com.taobao.tddl.parser.ast.fragment.tableref.TableReference;
+import com.taobao.tddl.parser.ast.fragment.tableref.TableReferences;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLSelectStatement;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLSelectUnionStatement;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLSelectStatement.SelectDuplicationStrategy;
+import com.taobao.tddl.parser.ast.stmt.dml.DMLSelectStatement.SelectOption;
+import com.taobao.tddl.parser.util.Pair;
+import com.taobao.tddl.parser.visitor.EmptySQLASTVisitor;
 
 /**
  * select表达式的解析
