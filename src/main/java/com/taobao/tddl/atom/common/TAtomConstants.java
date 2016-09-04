@@ -61,14 +61,14 @@ public class TAtomConstants {
     /**
      * 全局配置dataId模板
      */
-    private static MessageFormat       GLOBAL_FORMAT                                     = new MessageFormat("com.taobao.tddl.atom.global.{0}");
+    private static MessageFormat       GLOBAL_FORMAT                                     = new MessageFormat("atom/global/{0}");
 
     /**
      * 应用配置dataId模板
      */
-    private static MessageFormat       APP_FORMAT                                        = new MessageFormat("com.taobao.tddl.atom.app.{0}.{1}");
+    private static MessageFormat       APP_FORMAT                                        = new MessageFormat("atom/app/{0}/{1}");
 
-    private static MessageFormat       PASSWD_FORMAT                                     = new MessageFormat("com.taobao.tddl.atom.passwd.{0}.{1}.{2}");
+    private static MessageFormat       PASSWD_FORMAT                                     = new MessageFormat("atom/passwd/{0}/{1}/{2}");
 
     /**
      * dbName模板
